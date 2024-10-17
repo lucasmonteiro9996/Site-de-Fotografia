@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+}
+
+header {
+  margin-top: 0px; /* Espaço para o navbar fixo */
+}
+
+/* Navbar */
+
+
+ /* Tamanho da fonte padrão para o navbar */
+ .custom-navbar .navbar-nav .nav-link {
+  font-size: 1rem; /* Tamanho padrão da fonte */  
+  font-family:sans-serif;
+  padding-left: 55px;
+}
+
+/* Media Query para telas grandes */
+@media (min-width: 992px) {
+  .custom-navbar .navbar-nav .nav-link {
+    font-size: 1.10rem; /* Aumenta o tamanho da fonte em telas grandes */
+  }
+}
+
+/* Media Query para telas médias */
+@media (min-width: 768px) and (max-width: 991px) {
+  .custom-navbar .navbar-nav .nav-link {
+    font-size: 1.1rem; /* Ajusta o tamanho da fonte para telas médias */
+  }
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 300px) {
+  .custom-navbar .navbar-nav .nav-link {
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte para telas pequenas */
+  }
+}
+
+
+
+.nav-link {
+  font-size: 14px;
+}
+
+.custom-navbar{
+  padding: 0.1px;
+    position: fixed; /* fixa o navbar no topo da página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* garante que o navbar fique em cima do carrossel */
+    background-color: rgba(234, 161, 161, 0.578); /* ajusta a opacidade do navbar */
+  }
+
+.custom-navbar .navbar-nav{ 
+    margin-right: 100px; /* Ajuste o valor conforme necessário */
+    padding: 0px;
+}
+.nav-link{
+  color: rgb(0, 0, 0);
+      text-decoration: none;
+}
+
+
+/* Carousel */
+.carousel-item {
+  height: 100vh;
+  min-height: 30epx;
+  background: no-repeat center center;
+  background-size: cover;
+}
+
+/* Featurette */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+.featurette-image {
+  border-radius: 10px;
+}
+
+/* Pricing */
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+  /* Estilos para dispositivos móveis */
+  .carousel-item {
+    height: 50vh;
+  }
+
+  .featurette-heading {
+    font-size: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+.navbar-brand{
+  padding-left: 50px;
+}
+
+.custom-logo{
+  height: 65px;
+  border-radius: 10px;
+  border: 1px solid #ccc; /* adiciona uma borda com cor cinza claro */
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* adiciona uma sombra */
+}

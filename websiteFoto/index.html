@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta property="og:title" content="Orçamentos Lucas Monteiro">
+  <meta property="og:description" content="Confira nossos valores e planos de fotografias.">
+  <meta property="og:image" content="http://robertanascimento.fot.br/site/assets/img/001.jpeg">
+  <meta property="og:url" content="http://robertanascimento.fot.br/site/orcamento.html">
+
+  <meta name="twitter:title" content="Orçamentos">
+  <meta name="twitter:description" content="Confira nossos valores e planos de fotografias.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/logo.jpg">
+  <title>Fotógrafa Di</title>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $.ajax({
+        url: 'http://localhost:80/photoapi/pages/home/about.php',
+        type: 'GET',
+        success: function (response) {
+          $('#featurette').html(response.text);
+          $('.featurette-heading').html(response.title);
+        },
+        error: function (xhr, status, error) {
+          console.error(status, error);
+        }
+      });
+    });
+    
+    $(document).ready(function () {
+      $.ajax({
+        url: 'http://localhost:80/photoapi/pages/home/information.php',
+        type: 'GET',
+        success: function (response) {
+          $('#information').html(response.text);
+          $('.information').html(response.title);
+        },
+        error: function (xhr, status, error) {
+          console.error(status, error);
+        }
+      });
+    });
+    $(document).ready(function () {
+      $.ajax({
+        url: 'http://localhost:80/photoapi/pages/home/contact.php?contact=whatsapp',
+        type: 'GET',
+        success: function (response) {
+          console.log(response);
+          
+          var whatsappNumber = response.text; // Supondo que o número esteja no campo whatsappNumber da resposta
+          // Atualize o link do WhatsApp com o número retornado
+          var whatsappLink = "https://wa.me/" + response.text;
+          $('a[href="https://wa.me/5196067419"]').attr('href', whatsappLink);
+        },
+        error: function (xhr, status, error) {
+          console.error(status, error);
+        }
+      });
+    });
+
+
+    $(document).ready(function () {
+      $.ajax({
+        url: 'http://localhost:80/photoapi/pages/home/contact.php?contact=insta',
+        type: 'GET',
+        success: function (response) {
+          console.log(response);
+          
+          var instaArroba = response.text; // Supondo que o número esteja no campo whatsappNumber da resposta
+          // Atualize o link do WhatsApp com o número retornado
+          var instaLink = "https://www.instagram.com/" + response.text;
+          $('a[href="https://www.instagram.com/').attr('href', instaLink);
+        },
+        error: function (xhr, status, error) {
+          console.error(status, error);
+        }
+      });
+    });
+
+    $(document).ready(function () {
+      $.ajax({
+        url: 'http://localhost:80/photoapi/pages/home/contact.php?contact=face',
+        type: 'GET',
+        success: function (response) {
+          console.log(response);
+          
+          var facebookNome = response.text; // Supondo que o número esteja no campo whatsappNumber da resposta
+          // Atualize o link do WhatsApp com o número retornado
+          var faceLink = "https://www.facebook.com/" + response.text;
+          $('a[href="https://www.facebook.com/').attr('href', faceLink);
+        },
+        error: function (xhr, status, error) {
+          console.error(status, error);
+        }
+      });
+    });
+
+  </script>
+</head>
+
+<body>
+
+  <!--menu de navegação-->
+
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="custom-logo" src="img/logo.jpg" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText"> <!-- Adicionei a classe collapse aqui -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#preco">Preços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contatos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--fim do menu de navegação-->
+
+  <header>
+
+    <!--carrossel-->
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active"
+          style="background-image: url('img/card1.jpeg')">
+          <div class="carousel-caption">
+            <!-- <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>-->
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('img/card2.jpeg')">
+          <div class="carousel-caption">
+            <!-- <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>-->
+          </div>
+        </div>
+        <div class="carousel-item" style="background-image: url('img/card3.jpeg')">
+        <!-- <div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')"> -->
+          <div class="carousel-caption">
+            <!-- <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>-->
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>
+
+  <!--Fim do Carrossel-->
+
+  <!--Sobre-->
+  <div id="sobre"class="container">
+    <div class="row featurette mt-5">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Fisrt featurette-heading.
+        </h2>
+        <p class="lead" id="featurette">bla</p>
+
+      </div>
+      <div class="col-md-5">
+        <img class="featurette-image img-fluid h-90 rounded-top mx-auto" src="img/di.png"
+          alt="Diandra Hendz Fotógrafa">
+      </div>
+    </div>
+
+    <!--Fim de Sobre-->
+
+    <!--preços-->
+
+    <div id="preco" class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal text-body-emphasis">Eventos</h1>
+      <p class="fs-5 text-body-secondary">Aqui você terá qualidade e preço justo</p>
+    </div>
+    </header>
+
+    <main>
+      <!-- Preços -->
+      <div id="preco" class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+          <div class="col ">
+            <div class="card h-100">
+              <img src="img/card1.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">Pacote 1</h5>
+                <ul class="card-text " style = "list-style-type: circle">
+                  <li>Chegamos com 15min de antecedência;</li>
+                  <li>Fotos entregues via link, sem limite;</li>
+                  <li>3hs de cobertura;</li>
+                </ul>
+                <a target="_blank justify-content-center" href="https://wa.me/5196067419" class="d-flex justify-content-center text-decoration-none">
+                  <button class="btn btn-outline-secondary "><i class="fab fa-whatsapp"></i> Whatsapp</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/card2.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">Pacote 2</h5>
+                <ul class="card-text " style = "list-style-type: circle">
+                  <li>Todos os itens do pacote 1;</li>
+                  <li>20 fotos impressas (10x15);</li>
+                  <li>Vídeo de até 2min no formato REELS;</li>
+                </ul>
+                <a target="_blank justify-content-center" href="https://wa.me/5196067419" class="d-flex justify-content-center text-decoration-none">
+                  <button class="btn btn-outline-secondary "><i class="fab fa-whatsapp"></i> Whatsapp</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="img/card3.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center">Pacote 3</h5>
+                <ul class="card-text " style = "list-style-type: circle">
+                  <li>Todos os itens do pacote 2;</li>
+                  <li>Foto livro com 20 páginas - 20x20 e 400g/m²;</li>
+                  <li>Opção de upgrade no fotolivro;</li>
+                </ul>
+                <a target="_blank justify-content-center" href="https://wa.me/5196067419" class="d-flex justify-content-center text-decoration-none">
+                  <button class="btn btn-outline-secondary "><i class="fab fa-whatsapp"></i> Whatsapp</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--fim de preços-->
+      <div class="row featurette mt-5" id="informacoes">
+        <div class="col-md-5">
+          <img class="featurette-image img-fluid h-90 rounded-top mx-auto" src="img/di.png"
+            alt="Diandra Hendz Fotógrafa">
+        </div>
+        <div class="col-md-7">
+          <h2 class="information">Informações:
+          </h2>
+          <p class="lead" id="information">Informações</p>
+        </div>
+      </div>
+      <div id="contato" class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Contatos</h1>
+        <p class="lead">
+
+          Entre em contato:
+
+        <p>
+          <a target="_blank"
+            href="https://www.instagram.com/">
+            <button class="btn btn-outline-secondary"><i class="fab fa-instagram"></i> Instagram</button>
+          </a>
+
+          <a target="_blank" href="https://wa.me/5196067419">
+            <button class="btn btn-outline-secondary"><i class="fab fa-whatsapp"></i> Whatsapp</button>
+          </a>
+
+          <a target="_blank" href="https://www.facebook.com/">
+            <button class="btn btn-outline-secondary"><i class="fab fa-facebook"></i> Facebook</button>
+          </a>
+        </p>
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220896.07344309284!2d-51.341955490842516!3d-30.108470147276147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95199cd2566acb1d%3A0x603111a89f87e91f!2sPorto%20Alegre%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1712854934069!5m2!1spt-BR!2sbr"
+          width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+
+    </div>
+</body>
+
+</html>

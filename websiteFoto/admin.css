@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+    nav {
+    align-items: center;
+    font-family:  sans-serif;
+    background: #23232e;
+  }
+
+.carousel-item {
+    height: 91.0vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  /* Tamanho da fonte padrão para o navbar */
+.custom-navbar .navbar-nav .nav-link {
+  font-size: 1rem; /* Tamanho padrão da fonte */
+  font-family:sans-serif;
+}
+
+/* Media Query para telas grandes */
+@media (min-width: 992px) {
+  .custom-navbar .navbar-nav .nav-link {
+    font-size: 1.10rem; /* Aumenta o tamanho da fonte em telas grandes */
+  }
+}
+
+/* Media Query para telas médias */
+@media (min-width: 768px) and (max-width: 991px) {
+  .custom-navbar .navbar-nav .nav-link {
+    font-size: 1.1rem; /* Ajusta o tamanho da fonte para telas médias */
+  }
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 300px) {
+  .custom-navbar .navbar-nav .nav-link {
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte para telas pequenas */
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-brand {
+    margin-left: 1px;
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+
+  .custom-navbar .navbar-nav {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    margin-left: 0;
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+}
+
+  .navbar-brand{
+    color: #ffff;
+    margin-left: 10px;
+    font-family: sans-serif;
+  }
+  .custom-navbar .navbar-nav {
+    margin-right: 100px; /* Ajuste o valor conforme necessário */
+    padding: 1px;
+  }
+  
+
+  .navbar-toggler {
+    border-color: rgb(255, 255, 255);
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+
+.nav-link{
+  color: white;
+      text-decoration: none;
+}
+  .custom-logo{
+    height: 60px;
+      filter: brightness(80%) saturate(150%);
+  }
+
+
+
+
+  
+
